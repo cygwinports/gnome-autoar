@@ -1,0 +1,20 @@
+--- origsrc/gnome-autoar-0.2.1/Makefile.am	2017-02-22 04:22:02.000000000 -0600
++++ src/gnome-autoar-0.2.1/Makefile.am	2017-03-06 16:36:16.341654900 -0600
+@@ -81,6 +81,8 @@ gnome_autoar_libgnome_autoar_@LIBGNOME_A
+ 	-I$(top_builddir)/gnome-autoar		\
+ 	$(AM_CFLAGS)				\
+ 	$(NULL)
++gnome_autoar_libgnome_autoar_@LIBGNOME_AUTOAR_API_VERSION@_la_LDFLAGS = \
++	-no-undefined
+ gnome_autoar_libgnome_autoar_@LIBGNOME_AUTOAR_API_VERSION@_la_LIBADD = \
+ 	$(GIO_LIBS)				\
+ 	$(LIBARCHIVE_LIBS)			\
+@@ -110,6 +112,8 @@ gnome_autoar_libgnome_autoar_gtk_@LIBGNO
+ 	-I$(top_builddir)/gnome-autoar		\
+ 	$(AM_CFLAGS)				\
+ 	$(NULL)
++gnome_autoar_libgnome_autoar_gtk_@LIBGNOME_AUTOAR_API_VERSION@_la_LDFLAGS = \
++	-no-undefined
+ gnome_autoar_libgnome_autoar_gtk_@LIBGNOME_AUTOAR_API_VERSION@_la_LIBADD = \
+ 	$(GTK_LIBS)				\
+ 	$(top_builddir)/gnome-autoar/libgnome-autoar-@LIBGNOME_AUTOAR_API_VERSION@.la	\

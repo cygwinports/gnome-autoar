@@ -1,0 +1,39 @@
+inherit gnome2
+
+NAME="gnome-autoar"
+VERSION=0.2.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="GNOME archive library"
+DESCRIPTION="gnome-autoar provides functions, widgets, and gschemas for GNOME
+applications which want to use archives as a method to transfer directories
+over the Internet."
+
+PATCH_URI="0.2.1-no-undefined.patch"
+
+PKG_NAMES="libgnome-autoar0_0 libgnome-autoar0-devel libgnome-autoar0-doc
+	   girepository-GnomeAutoar0.1 vala-gnome-autoar0"
+libgnome_autoar0_0_CONTENTS="
+	usr/bin/cyggnome-autoar-0-0.dll
+	usr/bin/cyggnome-autoar-gtk-0-0.dll
+	usr/share/doc/${NAME}/
+"
+libgnome_autoar0_devel_CONTENTS="
+	usr/include/gnome-autoar-0/
+	usr/lib/libgnome-autoar-0.dll.a
+	usr/lib/libgnome-autoar-gtk-0.dll.a
+	usr/lib/pkgconfig/gnome-autoar-0.pc
+	usr/lib/pkgconfig/gnome-autoar-gtk-0.pc
+"
+libgnome_autoar0_doc_CATEGORY="Doc"
+libgnome_autoar0_doc_CONTENTS="
+	usr/share/gtk-doc/html/gnome-autoar/
+"
+girepository_GnomeAutoar0_1_CONTENTS="
+	usr/*/gir*-1.0/GnomeAutoar-0.1.*
+	usr/*/gir*-1.0/GnomeAutoarGtk-0.1.*
+"
+vala_gnome_autoar0_CONTENTS="
+	usr/share/vala/vapi/gnome-autoar-0.vapi
+	usr/share/vala/vapi/gnome-autoar-gtk-0.vapi
+"
